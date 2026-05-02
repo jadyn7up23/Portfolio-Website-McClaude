@@ -1,80 +1,100 @@
+/* ===== Base Page Styles ===== */
+/* Sets default spacing, font, colors, and readability */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f3f4f6;
-  color: #111827;
+  margin: 0; /* removes default browser margin */
+  font-family: Arial, sans-serif; /* sets main font */
+  line-height: 1.6; /* improves text readability */
+  background-color: #f3f4f6; /* light background color */
+  color: #111827; /* dark text color */
 }
 
+/* ===== Header (Sticky Navigation) ===== */
+/* Keeps header fixed at top when scrolling */
 header {
-  position: sticky;
-  top: 0;
-  background-color: #111827;
-  color: white;
-  padding: 20px;
-  box-shadow: 0 4px 6px gray;
+  position: sticky; /* makes header stay at top */
+  top: 0; /* sticks to very top */
+  background-color: #111827; /* dark background */
+  color: white; /* white text */
+  padding: 20px; /* space inside header */
+  box-shadow: 0 4px 6px gray; /* adds shadow for depth */
 }
 
+/* ===== Navigation Menu ===== */
 nav {
-  margin-top: 10px;
+  margin-top: 10px; /* space between title and nav links */
 }
 
+/* Styles navigation links */
 nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-  font-weight: bold;
+  color: white; /* link color */
+  text-decoration: none; /* removes underline */
+  margin-right: 15px; /* spacing between links */
+  font-weight: bold; /* makes links stand out */
 }
 
+/* Hover effect for navigation links */
 nav a:hover {
-  text-decoration: underline;
-  color: lightskyblue;
+  text-decoration: underline; /* underline on hover */
+  color: lightskyblue; /* color change */
 }
 
+/* ===== Theme Toggle Button ===== */
+/* Styles the dark/light mode button */
 #themeToggle {
   margin-top: 12px;
   padding: 8px 14px;
-  border: none;
+  border: none; /* removes default border */
   background-color: white;
   color: #111827;
   font-weight: bold;
-  cursor: pointer;
+  cursor: pointer; /* pointer on hover */
 }
 
+/* Hover effect for button */
 #themeToggle:hover {
   background-color: lightskyblue;
 }
 
+/* ===== Main Layout (Flexbox) ===== */
+/* Centers content and stacks sections vertically */
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* enables flexbox */
+  flex-direction: column; /* stack sections */
+  align-items: center; /* center horizontally */
   padding: 30px;
 }
 
+/* ===== Section Styling ===== */
+/* Styles each content box */
 section {
-  width: 80%;
-  max-width: 900px;
+  width: 80%; /* controls width */
+  max-width: 900px; /* prevents it from getting too wide */
   background-color: white;
   padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  margin-bottom: 20px; /* space between sections */
+  border-radius: 8px; /* rounded corners */
 }
 
+/* ===== Images ===== */
+/* Makes images responsive */
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* scales with screen */
+  height: auto; /* keeps proportions */
 }
 
+/* ===== Links inside sections ===== */
 section a {
   color: #2563eb;
   font-weight: bold;
 }
 
+/* Hover effect for section links */
 section a:hover {
   text-decoration: underline;
 }
 
+/* ===== Footer ===== */
+/* Matches header styling */
 footer {
   background-color: #111827;
   color: white;
@@ -82,65 +102,80 @@ footer {
   padding: 15px;
 }
 
+/* Footer links */
 footer a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* Footer hover effect */
 footer a:hover {
   text-decoration: underline;
   color: lightskyblue;
 }
 
-/* Dark mode */
+/* ===== Dark Mode Styles ===== */
+/* Applied when JavaScript toggles "dark-mode" class */
 body.dark-mode {
-  background-color: #1f2937;
-  color: #f9fafb;
+  background-color: #1f2937; /* dark background */
+  color: #f9fafb; /* light text */
 }
 
+/* Dark mode sections */
 body.dark-mode section {
   background-color: #374151;
   color: #f9fafb;
 }
 
+/* Dark mode header */
 body.dark-mode header {
   background-color: #000000;
 }
 
+/* Dark mode footer */
 body.dark-mode footer {
   background-color: #000000;
 }
 
+/* Keep links visible in dark mode */
 body.dark-mode nav a,
 body.dark-mode footer a {
   color: white;
 }
 
+/* Adjust button for dark mode */
 body.dark-mode #themeToggle {
   background-color: #f9fafb;
   color: #111827;
 }
 
-/* Responsive design */
+/* ===== Responsive Design ===== */
+/* Adjusts layout for smaller screens (mobile) */
 @media (max-width: 700px) {
+  
+  /* Center header content */
   header {
     text-align: center;
   }
 
+  /* Stack navigation links vertically */
   nav a {
     display: block;
     margin: 8px 0;
   }
 
+  /* Reduce padding on smaller screens */
   main {
     padding: 15px;
   }
 
+  /* Make sections full width */
   section {
     width: 100%;
   }
 
+  /* Make button full width */
   #themeToggle {
     width: 100%;
     margin-top: 10px;
