@@ -1,0 +1,148 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: #111827;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 6px gray;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: lightskyblue;
+}
+
+#themeToggle {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  background-color: white;
+  color: #111827;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#themeToggle:hover {
+  background-color: lightskyblue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+section {
+  width: 80%;
+  max-width: 900px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section a {
+  color: #2563eb;
+  font-weight: bold;
+}
+
+section a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #111827;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: lightskyblue;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #1f2937;
+  color: #f9fafb;
+}
+
+body.dark-mode section {
+  background-color: #374151;
+  color: #f9fafb;
+}
+
+body.dark-mode header {
+  background-color: #000000;
+}
+
+body.dark-mode footer {
+  background-color: #000000;
+}
+
+body.dark-mode nav a,
+body.dark-mode footer a {
+  color: white;
+}
+
+body.dark-mode #themeToggle {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+  header {
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  main {
+    padding: 15px;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  #themeToggle {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
